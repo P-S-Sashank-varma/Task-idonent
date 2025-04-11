@@ -6,12 +6,12 @@ const taskRoutes = require('./routes/taskRoutes');
 
 const app = express();
 
-// Use CORS middleware
-app.use(cors()); // This will allow all origins. You can configure it to allow specific origins.
+
+app.use(cors()); 
 
 app.use(express.json());
 
-const mongoURI = 'mongodb://127.0.0.1:27017/taskidovenet'; // MongoDB URI (local)
+const mongoURI = 'mongodb://127.0.0.1:27017/taskidovenet'; 
 
 mongoose.connect(mongoURI, {
   useNewUrlParser: true,
@@ -20,10 +20,10 @@ mongoose.connect(mongoURI, {
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.log("MongoDB connection error: ", err));
 
-// Use the task routes
+
 app.use('/api/tasks', taskRoutes);
 
-// Sample endpoint to check if the API is running
+
 app.get('/', (req, res) => {
   res.send("Task Mate API is running!");
 });

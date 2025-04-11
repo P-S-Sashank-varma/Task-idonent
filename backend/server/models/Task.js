@@ -1,4 +1,4 @@
-// server/models/Task.js
+
 const mongoose = require('mongoose');
 
 const taskSchema = new mongoose.Schema({
@@ -14,7 +14,7 @@ const taskSchema = new mongoose.Schema({
     default: false,
   }
 }, {
-  timestamps: true, // adds createdAt and updatedAt
+  timestamps: true, 
 });
 
 const Task = mongoose.model('Task', taskSchema);

@@ -88,7 +88,7 @@ const Home = () => {
     }
   };
 
-  // Handle search and filter logic
+  
   const filteredTasks = tasks.filter((task) => {
     const matchesSearchQuery = task.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                                task.description.toLowerCase().includes(searchQuery.toLowerCase());
